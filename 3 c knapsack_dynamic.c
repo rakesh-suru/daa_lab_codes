@@ -16,7 +16,7 @@ int knapsack(int W, int weights[], int values[], int n){
 				dp[i][w] = 0;
 			}
 			else if(weights[i-1] <= w){
-				dp[i][w] = max(values[i-1] + dp[i-1][w-weights[w-1]], dp[i-1][w]);
+				dp[i][w] = max(values[i-1] + dp[i-1][w-weights[i-1]], dp[i-1][w]);
 			}
 			else{
 				dp[i][w] = dp[i-1][w];
