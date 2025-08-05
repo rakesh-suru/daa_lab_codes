@@ -17,8 +17,8 @@ int tsp(int graph[v][v], int path[], int visited[], int pos, int count, int cost
 			int tempCost = tsp(graph, path, visited, i, count + 1, cost + graph[pos][i], start);
 			if(tempCost < ans){
 				ans = tempCost;
-				visited[i] = 0;
 			}
+			visited[i] = 0;
 		}
 	}
 	return ans;
